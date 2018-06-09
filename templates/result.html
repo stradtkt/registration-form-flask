@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{super()}} | Result {% endblock %}
+
+{% block content %} 
+<div class="row">
+  <div class="col m1"></div>
+    <div class="col m10">
+      <form>
+        <div class="input-field">
+          <input type="text" name="first_name" value="{{session['first_name']}}">
+        </div>
+        <div class="input-field">
+            <input type="text" name="last_name" value="{{session['last_name']}}">
+          </div>
+        <div class="input-field">
+          <input type="text" name="email" value="{{session['email']}}">
+        </div>
+      </form>
+      <div class="input-field">
+        <input type="text" name="password" value="{{session['password']}}">
+      </div>
+      <div class="input-field">
+        <input type="text" name="confirm_password" value="{{session['confirm']}}">
+      </div>
+    </div>
+  </div>
+<div class="col m1"></div>
+</div>
+{% endblock %}
